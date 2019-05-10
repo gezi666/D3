@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+  background: #f3f3f3;
+}
+.main{
+  width: 100%;
+  display: flex;
+}
+.painting-wrap{
+  width: 100%;
+}
+.chart-wrap{
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border-radius: 2px;
+  margin: 30px;
+  display: flex;
+  align-items: flex-end;
+  background: #f9f9f9;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  transition: all .3s;
+  overflow: hidden;
+}
+.tip{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  font-size: 14px;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,.3);
+  /* transform:translateY(-100%);
+  transition: all .3s; */
+}
+.chart-wrap:hover{
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+}
+/* .chart-wrap:hover .tip{
+  transform:translateY(0) 
+} */
+
+.bar-item{
+  display: inline-flex;
+  width: 30px;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 12px;
+  background: -webkit-linear-gradient(bottom,#00CCFF,#0033FF);
+  align-items: flex-start;
+  justify-content: center;
+}

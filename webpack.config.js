@@ -9,10 +9,7 @@ const path = require("path")
 
 module.exports = {
 	mode:'development',
-	entry: {
-		index: "./src/index.js",
-		vendor: "./src/vendor.js"
-	},
+	entry: "./src/index.js",
 	devtool: 'inline-source-map',
 	devServer: {
 		contentBase: '/dist',

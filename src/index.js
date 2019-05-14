@@ -1,8 +1,8 @@
 
 import "./assert/reset"
 import "./assert/common"
-import initBar from "./chart/bar"
+import Bar from "./chart/bar"
+import Scatter from "./chart/scatter"
 
-const dataset = [100,34,146,67,235,200,80,95]
-
-new initBar(dataset)    // 绘制柱状图
+new Bar()    // 绘制柱状图
+new Scatter()    // 绘制散点图

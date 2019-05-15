@@ -42,6 +42,7 @@ class Bar{
         .style("x",(d,i)=>xScale(50*i))
         // .style("y",(d,i)=> yScale(d))
         .style("y",d=> h-padding-d)
+        .style("cursor","pointer")
         .attr("fill","#188df0")
         .on("mouseover",function(d,i){
           d3.select(this)
@@ -58,12 +59,8 @@ class Bar{
         .on("click",function(d,i){
           alert(`元素信息   ${i} : ${d}`)
         })
-
-    svg.selectAll("title")
-     .data(dataset)
-     .enter()
-     .append("title")
-     .text(d=>d)
+        .append("title")
+        .text(d=>`数值：${d}`)
       
     svg.selectAll("text")
       .data(dataset)

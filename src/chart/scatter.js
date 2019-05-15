@@ -13,7 +13,8 @@ class Scatter{
       [ 222, 333, 10 ],
       [ 78, 320, 15 ],
       [ 21, 123, 8 ],
-      [ 530, 350, 21 ]
+      [ 530, 350, 21 ],
+      [ 600, 60, 30 ]
     ]
 
     const duration = 300
@@ -33,30 +34,40 @@ class Scatter{
         .data(dataset)
         .enter()
         .append("circle")
-        .attr("fill","rgb(251, 118, 123)")
+        .classed("scatter",true)
+        // .attr("fill","rgb(251, 118, 123)")
         .attr("cx",d=>xScale(d[0]))
         .attr("cy",d=>yScale(d[1]))
         .attr("r",d=>d[2])
         .on("mouseover",function(d,i){
             d3.select(this)
-              .transition()
-              .duration(duration)
+              // .transition()
+              // .duration(duration)
               .attr("r",d=>d[2]+3)
         })
         .on("mouseout",function(d,i){
             d3.select(this)
-              .transition()
-              .duration(duration)
+              // .transition()
+              // .duration(duration)
               .attr("r",d=>d[2])
+        })
+        .on("click",function(d,i){
+          alert("别点我")
+        })
+        .append("title")
+        .text((d,i)=>{
+          return `这是第${i}个点\nX坐标：${d[0]}\nY坐标：${d[1]}\n值：${d[2]}`
         })
 
     svg.selectAll("text")
         .data(dataset)
         .enter()
         .append("text")
-        .text(d=>`${d[0]}, ${d[1]}`)
+        // .text(d=>`${d[0]}, ${d[1]}`)
+        .text(d=>`${d[2]}`)
         .attr("x",d=>xScale(d[0]+d[2]+10))
         .attr("y",d=>yScale(d[1]))
+        .attr("fill","#000")
 
     svg.append("g").attr("transform",`translate(0,${h-padding})`).call(xAxis)
     svg.append("g").attr("transform",`translate(${padding},0)`).call(yAxis)

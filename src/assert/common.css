@@ -60,3 +60,11 @@ body{
   align-items: flex-start;
   justify-content: center;
 }
+.scatter{
+  cursor: pointer;
+  fill:rgb(251, 118, 123);
+  transition: all .3s;
+}
+.scatter:hover{
+  fill:red
+}

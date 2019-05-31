@@ -20,12 +20,12 @@ body{
   width: 400px;
   height: 300px;
   /* padding: 30px; */
-  border-radius: 2px;
+  border-radius: 3px;
   margin: 30px;
   display: flex;
   background: #f9f9f9;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  transition: all .3s;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+  transition: all 1s;
   overflow: hidden;
 }
 .tip{
@@ -39,12 +39,12 @@ body{
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.4);
   /* transform:translateY(-100%);
   transition: all .3s; */
 }
 .chart-wrap:hover{
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px 2px rgba(0,0,0,0.2);
 }
 /* .chart-wrap:hover .tip{
   transform:translateY(0) 

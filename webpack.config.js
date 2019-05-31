@@ -58,6 +58,7 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin()
 	],
 	output: {
+		publicPath: "/D3/dist/",
 		filename: "static/js/[name].[hash].js",
 		path: path.resolve(__dirname,"./dist")
 	},
